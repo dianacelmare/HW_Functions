@@ -20,7 +20,7 @@
 
 // Output: 144
 
-function findSquare(num){
+function findSquare(num) {
   return Math.pow(num, 2);
 }
 
@@ -43,14 +43,14 @@ console.log(findSquare(-12));
 // Notă: Exemplele date sunt de natură abstractă pentru a nu crea confuzii. Numerele aleatoare generate nu pot fi estimate în avans, fiecare apel de funcție generând un nou număr aleator. Singura regulă impusă este respectarea intervalului dat de parametrii de început și de sfârșit.
 
 // function getRandom(start, end){
-  
+
 // }
 
 const getRandom = (start, end) => {
-  return Math.floor(Math.random()*(end-start)+start);
+  return Math.floor(Math.random() * (end - start) + start);
 }
 
- console.log('Numar random:',getRandom(3,4));
+console.log('Numar random:', getRandom(3, 4));
 
 
 // 3. Scrieți o funcție pentru a găsi numărul de apariții al unei litere într-un șir
@@ -72,10 +72,10 @@ const getRandom = (start, end) => {
 // Notă: Nu se ține cont de scrierea cu majuscule sau minuscule. Litera A și litera a trebuie numărate la calcularea numărului de apariții pentru A sau pentru a.
 
 const letterCount = (letter, array) => {
-  let count=0;
-  const arrayLowerCase=array.toLowerCase();
-  for(let i=0;i<=arrayLowerCase.length; i++){
-    if(letter==arrayLowerCase[i]){
+  let count = 0;
+  const arrayLowerCase = array.toLowerCase();
+  for (let i = 0; i <= arrayLowerCase.length; i++) {
+    if (letter == arrayLowerCase[i]) {
       count++;
     }
   }
@@ -105,13 +105,19 @@ console.log(letterCount('a', 'Am vazut-o pe Mara'));
 
 const addNumber = (...arguments) => {
   // forEach(number in numbers) console.log(name)
-  let sum=0;
-  for(let i = 0; i < arguments.length; i++){
-    sum+=arguments[i];
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
   }
   return sum;
 }
 
 console.log(addNumber(1, 2, 3));
 console.log(addNumber(1, 2, 3, 4, 5, 6));
+
+const newFunction = (num) => {
+  if (num > 0) {
+    console.log("Numar pozitiv")
+  } else console.log("Numar negativ")
+}
 
